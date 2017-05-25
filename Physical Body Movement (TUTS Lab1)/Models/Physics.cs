@@ -40,7 +40,7 @@ namespace Physical_Body_Movement__TUTS_Lab1_.Models
                 }
 
 
-            for (double xx = 0; xx < 2 * Math.PI * 10; xx += .01)
+            for (double xx = 0.1; xx < 2 * Math.PI * 10; xx += .01)
             {
                 x.Add(xx);
                 y.Add(func(a, k, xx));
