@@ -6,17 +6,17 @@ namespace Physical_Body_Movement__TUTS_Lab1_.Models
     {
         public static double GainUnitF(double a, double k, double t)
         {
-            return k * Math.Sin(t);
+            return -k * Math.Cos(t);
         }
 
         public static double GainUnitA(double a, double k, double ω)
         {
-            return k;
+            return k / ω;
         }
 
         public static double GainUnitPhi(double a, double k, double ω)
         {
-            return 0;
+            return 3 * Math.PI / 2;
         }
 
         public static double AperiodicUnitF(double a, double k, double t)
