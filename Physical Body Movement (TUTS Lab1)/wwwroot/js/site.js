@@ -31,13 +31,16 @@
             xAxis.unshift("x");
             var yAxis = data.y.slice();
             yAxis.unshift(title);
+            var yInput = data.input.slice();
+            yInput.unshift("Input [sin(t)]");
             c3.generate({
                 bindto: "#chart",
                 data: {
                     x: "x",
                     columns: [
                         xAxis,
-                        yAxis
+                        yAxis,
+                        yInput
                         //["x", 0.01, 0.05, 0.1, 0.5, 1, 2],
                         //["dx/dt", 1, 2, 3, 4, 5, 6]
                     ]

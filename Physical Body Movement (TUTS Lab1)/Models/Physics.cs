@@ -9,6 +9,7 @@ namespace Physical_Body_Movement__TUTS_Lab1_.Models
         {
             var x = new List<double>();
             var y = new List<double>();
+            var input = new List<double>();
 
 
             Func<double, double, double, double> func;
@@ -44,9 +45,10 @@ namespace Physical_Body_Movement__TUTS_Lab1_.Models
             {
                 x.Add(xx);
                 y.Add(func(a, k, xx));
+                input.Add(Math.Sin(xx));
             }
 
-            return new ChartData { X = x, Y = y, IsValid = true };
+            return new ChartData { X = x, Y = y, Input = input, IsValid = true };
         }
     }
 }
